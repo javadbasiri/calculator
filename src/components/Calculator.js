@@ -60,9 +60,15 @@ const Calculator = ()=>{
     }
 
     const equals = ()=>{
-        setPrevious("");
-        setOperation("");
-        setCurrent(compute())
+        if(previous == "") return;
+        else{
+            if(current == "") return;
+            else{
+                setPrevious("");
+                setOperation("");
+                setCurrent(compute())
+            }
+        }
         
     }
     return(
